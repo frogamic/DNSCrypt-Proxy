@@ -38,7 +38,10 @@ HEALTHCHECK CMD nslookup gstatic.com 127.0.0.1
 ENTRYPOINT /usr/bin/dnscrypt-proxy
 
 ARG VERSION
-LABEL Maintainer="Dominic Shelton" \
-      Author="Dominic Shelton" \
-      Version=${VERSION} \
-      Description="DNSCrypt v2/DoH client using jedisct1/dnscrypt-proxy."
+LABEL org.opencontainers.image.authors="Dominic Shelton" \
+      org.opencontainers.image.title="DNSCrypt/DoH Proxy" \
+      org.opencontainers.image.description="DNSCrypt/DoH proxy server using jedisct1/dnscrypt-proxy." \
+      org.opencontainers.image.url="https://hub.docker.com/r/frogamic/dnscrypt-proxy" \
+      org.opencontainers.image.source="https://github.com/frogamic/dnscrypt-proxy" \
+      org.opencontainers.image.version=${VERSION} \
+      org.opencontainers.image.licenses="GPL-3.0"
